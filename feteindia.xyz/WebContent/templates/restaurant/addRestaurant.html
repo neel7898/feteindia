@@ -1,0 +1,106 @@
+<div style="background-image: url('images/venue.jpg'); display: block;">
+	<div style="background-color: rgba(0, 0, 0, 0.8);">
+		<div class="jumbotron header">
+			<div style="text-align: center; color: white;">
+				<h1 style="margin-top: 100px;">
+					Add your <span style="color: orange;">Business.</span>
+				</h1>
+				<p style="color: #ffffff;">Increase your business with our website absolutely free!</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-sm-8 col-sm-offset-2" style="padding-top: 30px; padding-bottom: 50px;">
+<form class="form-horizontal" name="restaurent">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="name" >Business Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" placeholder="Enter your business name" data-ng-model="rest.name" required>
+    </div>
+  </div>
+  
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email" data-ng-model="rest.email" required>
+    </div>
+  </div>
+  
+   <div class="form-group">
+    <label class="control-label col-sm-2" for="address">Address:</label>
+    <div class="col-sm-10">
+  <textarea class="form-control" rows="3" id="address" placeholder="Enter your business adress" data-ng-model="rest.address.addressLine" required></textarea></div>
+</div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pincode">Pin Code:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="pincode" placeholder="Enter pincode" data-ng-model="rest.address.pinCode" value="456010" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="address">Location:</label>
+    <div class="col-sm-10">
+    	<select id="location" class="form-control" data-ng-model="rest.address.location">
+    		<option value="Freeganj">Freeganj</option>
+    		<option value="Nanakheda">Nanakheda</option>
+    		<option value="Mahananda Nagar">Mahananda Nagar</option>
+    	</select>
+    </div>
+</div>
+  
+
+ 
+ 	  <div class="form-group">
+    <label class="control-label col-sm-2" for="city">City:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="city" placeholder="Enter city" data-ng-model="rest.address.city" value="Ujjain" required>
+    </div>
+  </div>
+  
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="state">State:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="state" placeholder="Enter state" data-ng-model="rest.address.state" value="Madhya Pradesh" required>
+    </div>
+  </div>
+  
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="contact">Contact Number:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="contact" placeholder="Enter contact number" data-ng-model="rest.contactNo" required>
+    </div>
+  </div>
+ 
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" data-ng-click="register(rest);" data-toggle="modal" data-target="#loader" data-ng-disabled="restaurent.$invalid">Register</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </div>
+  </div>
+</form>
+</div>
+
+<!-- Modal -->
+<div id="loader" class="modal fade" role="dialog">
+  <div class="modal-dialog text-center" style="margin:auto; margin-top: 250px; position: relative;">
+	<div class="loader" style="position: absolute;top: 0px;bottom: 0px;left: 0px;right: 0px;margin: auto;"></div><div style="color: #ffffff; position: relative; top: 75px;"><p>Registering your business...</p></div>
+  </div>
+</div>
+
+<!-- <form name="restaurent">
+
+	Name: <input type="text" data-ng-model="rest.name"> <br>
+	Address: <input type="text" data-ng-model="rest.address.addressLine"> <br>
+	Email: <input type="text" data-ng-model="rest.email"> <br>
+	Pin Code: <input type="text" data-ng-model="rest.address.pinCode"> <br>
+	City: <input type="text" data-ng-model="rest.address.city"> <br>
+	State: <input type="text" data-ng-model="rest.address.state"> <br>
+	Contact Number: <input type="text" data-ng-model="rest.contactNo"> <br>
+	<button type="submit" data-ng-click="register(rest);">Register Restaurant</button>
+	<button type="reset">Reset</button>
+	
+
+</form> -->
