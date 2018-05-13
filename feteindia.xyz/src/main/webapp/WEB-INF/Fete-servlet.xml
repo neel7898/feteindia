@@ -25,7 +25,7 @@
          <!-- <property name="driverClassName"  value="org.postgresql.Driver"></property>  
         <property name="url" value="jdbc:postgresql://localhost:5432/postgres"></property>  
         <property name="username" value="postgres"></property>  
-        <property name="password" value="Neel@7898"></property> -->  
+        <property name="password" value="Neel@7898"></property>   -->
     </bean>
     
      <bean id="mysessionFactory"  class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
@@ -35,7 +35,7 @@
         <property name="configurationClass"> <value>org.hibernate.cfg.AnnotationConfiguration</value> </property> 
         <property name="hibernateProperties">  
             <props>  
-                <!-- <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
+               <!--  <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>   
                 <prop key="hibernate.hbm2ddl.auto">update</prop>  
                 <prop key="hibernate.show_sql">true</prop>  
